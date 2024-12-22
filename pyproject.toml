@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "scraping-etl"
+version = "0.1.0"
+description = ""
+authors = ["behike56 <engineering@lambda-publishing.dev>"]
+readme = "README.md"
+packages = [
+    { include = "scraping_etl", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+beautifulsoup4 = "^4.12.2"
+requests = "^2.32.3"
+
+[tool.poetry.scripts]
+app = "scraping_etl.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
